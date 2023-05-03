@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div class="text-center">
+    <a href="/wishlist/" th:href="@{/wishlist/new}" class="btn btn-outline-secondary text-center">New Wishlist Item</a>
+
+</div>
+
+<div class="col" th:each="wishlist : ${wishlist}">
+    <p class="card-text">
+        <span th:text="${wishlist.getTitle()}"></span>
+        <br>
+        <small class="text-muted"><em th:text="${wishlist.getIsbn()}"></em></small>
+    </p>
+    <div class="btn-group">
+        <a href="#" th:href="@{/{id}(id=${wishlist.getIsbn()})}" class="btn btn-sm btn-outline-secondary">View</a>
+    </div>
+</div>
+
+</body>
+</html>

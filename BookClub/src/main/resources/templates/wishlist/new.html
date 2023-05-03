@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="#" th:action="@{/wishlist}" th:object="${wishlistItem}" method="post">
+  <label for="isbn" class="form-label">ISBN</label>
+  <input type="text" class="form-control" id="isbn" name="isbn" th:field="*{isbn}"/>
+
+</form>
+
+</body>
+</html>
